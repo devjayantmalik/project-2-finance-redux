@@ -1,0 +1,3 @@
+export const CREATE_POLICY = "CREATE_POLICY";
+export const CLAIM_AMOUNT = "CLAIM_AMOUNT";
+export const DELETE_POLICY = "DELETE_POLICY";

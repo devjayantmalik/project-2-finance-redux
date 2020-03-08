@@ -13,7 +13,7 @@ class CreatePolicy extends React.Component {
     this.props.createPolicy(mobile, holder, amount);
 
     // clear the state and notify the user.
-    this.setState({ mobile: "", holder: "", amount: 0 });
+    this.setState({ mobile: "", holder: "", amount: "" });
     alert("Policy created successfully.");
   };
 
@@ -39,13 +39,18 @@ class CreatePolicy extends React.Component {
             type="text"
             placeholder="Enter Holder Name"
           />
-          <input
-            value={this.state.amount}
-            onChange={e => this.setState({ amount: e.target.value })}
-            className="form-control my-2"
-            type="number"
-            placeholder="Enter Deposit Amount"
-          />
+          <div className="input-group my-2">
+            <label className="input-group-prepend">
+              <span className="input-group-text">Enter Deposit Amount</span>
+            </label>
+            <input
+              value={this.state.amount}
+              onChange={e => this.setState({ amount: e.target.value })}
+              className="form-control"
+              type="number"
+            />
+          </div>
+
           <button className="btn btn-primary btn-block my-2" type="submit">
             Create Policy Now
           </button>

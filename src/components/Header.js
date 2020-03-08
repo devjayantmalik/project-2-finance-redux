@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="navbar navbar-dark bg-dark d-flex justify-content-center align-items-center py-0">
       <a href="/" className="navbar-brand navbar-text">
-        React and Redux Practice Project - Finance App
+        Finance App
       </a>
     </header>
   );

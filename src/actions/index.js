@@ -18,10 +18,11 @@ export const deletePolicy = mobile => {
   };
 };
 
-export const claimAmount = (mobile, amount, reason) => {
+export const claimAmount = (policies, mobile, amount, reason) => {
   return {
     type: CLAIM_AMOUNT,
     payload: {
+      policies: policies,
       mobile: mobile,
       amount: amount,
       reason: reason

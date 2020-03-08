@@ -29,7 +29,7 @@ const generateClaimsRows = claims => {
 
   return claims.map(claim => {
     return (
-      <tr>
+      <tr key={claim.mobile}>
         <td>{claim.mobile}</td>
         <td>{claim.amount}</td>
         <td>{claim.reason}</td>

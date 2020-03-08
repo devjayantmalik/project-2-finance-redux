@@ -10,7 +10,7 @@ class ClaimAmount extends React.Component {
 
     // claim amount
     const { mobile, amount, reason } = this.state;
-    this.props.claimAmount(mobile, amount, reason);
+    this.props.claimAmount(this.props.policies, mobile, amount, reason);
 
     // reset the state and notify the user.
     this.setState({ mobile: "", amount: 0, reason: "" });
@@ -28,13 +28,19 @@ class ClaimAmount extends React.Component {
             type="text"
             placeholder="Enter Mobile Number"
           />
-          <input
-            value={this.state.amount}
-            onChange={e => this.setState({ amount: e.target.value })}
-            className="form-control my-2"
-            type="number"
-            placeholder="Enter Claim Amount"
-          />
+          <div className="input-group my-2">
+            <label className="input-group-prepend">
+              <span className="input-group-text">Enter Claim Amount</span>
+            </label>
+            <input
+              value={this.state.amount}
+              onChange={e => this.setState({ amount: e.target.value })}
+              className="form-control"
+              type="number"
+              placeholder="Enter Claim Amount"
+            />
+          </div>
+
           <input
             value={this.state.reason}
             onChange={e => this.setState({ reason: e.target.value })}
@@ -51,8 +57,8 @@ class ClaimAmount extends React.Component {
   }
 }
 
-const mapStateToProps = ({ claims }) => {
-  return { claims };
+const mapStateToProps = ({ claims, policies }) => {
+  return { claims, policies };
 };
 
 export default connect(

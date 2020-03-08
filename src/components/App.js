@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import FinanceTabs from "./FinanceTabs";
+import Reports from "./Reports";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <main>
         <Hero />
         <FinanceTabs />
+        <Reports />
       </main>
     </div>
   );

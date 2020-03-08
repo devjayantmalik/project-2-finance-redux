@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  ClaimAmount,
-  CreatePolicy,
-  DeletePolicy,
-  TabsNav
-} from "./finance-tabs";
+import { TabsNav } from "./finance-tabs";
+import ClaimAmount from "./finance-tabs/ClaimAmount";
+import CreatePolicy from "./finance-tabs/CreatePolicy";
+import DeletePolicy from "./finance-tabs/DeletePolicy";
 
 const FinanceTabs = () => {
   return (

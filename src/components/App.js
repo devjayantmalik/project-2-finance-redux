@@ -1,9 +1,16 @@
 import React from "react";
+import Header from "./Header";
+import Hero from "./Hero";
+import FinanceTabs from "./FinanceTabs";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello from app.</h1>
+      <Header />
+      <main>
+        <Hero />
+        <FinanceTabs />
+      </main>
     </div>
   );
 };

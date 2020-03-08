@@ -11,3 +11,4 @@ The app supports:
 - Creation of contract between company and the user.
 - Deletion of user from the company
 - Claim some amount from the company.
+- The application will ignore all the invalid enteries.
